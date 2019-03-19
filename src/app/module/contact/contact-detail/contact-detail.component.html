@@ -1,0 +1,25 @@
+<div class="card bg-light mb-3">
+  <div class="card-header">
+    <h3>
+      <fa-icon [icon]="['fas', 'seedling']" class="text-success"></fa-icon> Contact
+    </h3>
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <h5 class="card-title mb-0">
+        <a routerLink="/contact/edit/{{contact.id}}" class="float-right">
+          <fa-icon [icon]="['fas', 'edit']" class="text-success"></fa-icon>
+          <span class="sr-only">Edit Contact</span>
+        </a>
+      </h5>
+      <p class="card-text text-muted text-truncate">
+        <b>Firstname</b> : {{contact.firstname}}<br>
+        <b>Lastname</b> : {{contact.lastname}}<br>
+        <b>Adresse</b> : {{contact.adresse}}<br>
+        <b>Email</b> : {{contact.email}}<br>
+        <b>Phone</b> : {{contact.phone}}<br>
+        <b>Birthday</b> : {{contact.birthday}}<br>
+      </p>
+    </div>
+  </div>
+</div>

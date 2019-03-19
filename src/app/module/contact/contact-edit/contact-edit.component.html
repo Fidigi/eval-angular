@@ -1,0 +1,38 @@
+<div class="jumbotron">
+  <h1 class="text-center">Edit</h1>
+  <div [hidden]="!error" class="alert-danger" role="alert">
+    <fa-icon [icon]="['fas', 'exclamation-triangle']"></fa-icon>
+    <span class="text-center">{{error}}</span>
+  </div>
+  <form [formGroup]="ctcForm" *ngIf="ctcForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstname">Firstname</label>
+      <input type="text" class="form-control" id="firstname" placeholder="Firstname *" formControlName="firstname">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Lastname</label>
+      <input type="text" class="form-control" id="lastname" placeholder="Lastname *" formControlName="lastname">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="phone" placeholder="Phone *" formControlName="phone">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" id="email" placeholder="Email *" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="adresse">Adresse</label>
+      <input type="text" class="form-control" id="adresse" placeholder="Adresse *" formControlName="adresse">
+    </div>
+    <div class="form-group">
+      <label for="birthday">Birthday</label>
+      <input type="text" class="form-control" id="birthday" placeholder="Birthday *" formControlName="birthday">
+    </div>
+    
+    <div class="form-group">
+      <button type="submit" class="btn btn-outline-success btn-block" [disabled]="!ctcForm.valid">Validate</button>
+      <a routerLink="/contact/lists" class="btn btn-outline-secondary btn-block">Cancel</a>
+    </div>
+  </form>
+</div>
